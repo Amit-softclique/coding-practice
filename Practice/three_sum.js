@@ -7,6 +7,7 @@ function threeSum(arr, target) {
     for (let i=0; i<arr.length; i++) {
         for ( let j=i+1; j<arr.length; j++) {
             const complement = target - (arr[i] + arr[j]);
+            console.log('complement', complement)
             if (complement in hash) {
                 result.push([arr[i], arr[j], complement]);
             } else {

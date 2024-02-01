@@ -4,10 +4,9 @@ function occuerenceWord(text) {
     let arrayString = text.replace(/[^a-zA-Z ]/g,"")
     .toLowerCase()
     .split(" ");
-
     
     let charMap = new Map();
-    console.log('test', charMap);
+    
     for (let i=0; i < arrayString.length; i++) {
         if(charMap.has(arrayString[i])) {
             charMap.set(arrayString[i], charMap.get(arrayString[i]) + 1);
