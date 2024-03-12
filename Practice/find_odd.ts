@@ -13,5 +13,5 @@ function missingNumber(arr1) {
     }
 }
 
-const res = missingNumber(arr1);
-console.log('final', res);
+const result = missingNumber(arr1);
+console.log('final', result);
