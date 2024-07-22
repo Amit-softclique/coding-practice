@@ -5,17 +5,6 @@ function occuerenceWord(text) {
     .toLowerCase()
     .split(" ");
     
-    // let charMap = new Map();
-    
-    // for (let i=0; i < arrayString.length; i++) {
-    //     if(charMap.has(arrayString[i])) {
-    //         charMap.set(arrayString[i], charMap.get(arrayString[i]) + 1);
-    //     } else {
-    //         charMap.set(arrayString[i], 1);
-    //     }
-    // }
-    // return charMap;
-
     const result = arrayString.reduce((hash, word)=> {
         hash[word]=hash[word] || 0;
         hash[word]++;
