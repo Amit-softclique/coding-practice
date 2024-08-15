@@ -20,3 +20,24 @@ function numFreq() {
 }
 
 console.log(numFreq())
+
+// Usign reduce method in javascript
+
+function numFreq() {
+  const num=12343221
+  const numArr=num.toString().split('')
+  
+  const result = numArr.reduce((acc, item) => {
+      const digit = parseInt(item, 5)
+      
+      if (acc[digit]) {
+          acc[digit]++
+      } else {
+          acc[digit] = 1
+      }
+      return acc
+  }, {})
+  return result
+}
+
+console.log(numFreq())
