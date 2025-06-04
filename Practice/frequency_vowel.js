@@ -15,3 +15,18 @@ function countVowel(sentence) {
 }
 
 console.log(countVowel('I love my india very much.'));
+
+************ Optimize using Reduce method *****************
+    
+    function countVowel(sentence){
+    const vowels = ['a', 'e', 'i','o', 'u'];
+    const newSentence = sentence.toLowerCase().split('');
+    const result = newSentence.reduce((hash, word)=> {
+        if(vowels.includes(word)){
+            hash[word] = (hash[word] || 0) + 1;
+        }
+        return hash
+    }, {})
+    return result;
+}
+console.log('count', countVowel('I love my india very much.'))
