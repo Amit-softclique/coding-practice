@@ -1,0 +1,22 @@
+function smallest(arr){
+    let small = arr[0];
+    for(let i=0; i<arr.length; i++) {
+        if(arr[i] < small){
+            small = arr[i];
+        }
+    }
+    return small;
+}
+console.log('Small=>', smallest([4,6,15,12,9,8])); => 4
+
+function Largest(arr){
+    let result = arr[0];
+    for(let i=0; i<arr.length; i++) {
+        if(arr[i] > result){
+            result = arr[i];
+        }
+    }
+    return result;
+}
+
+console.log('Large=>', smallest([4,6,15,12,9,8])); => 15
