@@ -1,0 +1,20 @@
+function secondLargest(arr) {
+  if(arr.length < 2) {
+  return "Array must be atleast 2 elements."
+  }
+  let firstLarge = -Infinity;
+  let secondLarge = -Infinity;
+
+  for (let i=0; i<arr.length; i++) {
+    if(arr[i] > firstLarge) {
+      secondLarge = firstLarge;
+      firstLarge = arr[i];
+    } else if(arr[i] > secondLarge && arr[i] !== firstLarge) {
+      secondLarge = arr[i]
+    }
+  }
+  return secondLarge;
+}
+
+console.log('SecondLarge=>', secondLarge([4,6,15,12,9,8]))
+// output => 12
