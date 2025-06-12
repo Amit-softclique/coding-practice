@@ -1,0 +1,14 @@
+const obj = { 
+  name: { firstName: "chiru", lastName: "gampala" },
+  address: { birthPlace: { village: "ponduru" } }
+};
+Display firstName, lastName, village using destruturing without using dot nation in javascript.
+
+const {
+name: {firstName, lastName}, address: {birthPlace: {village}}
+} = obj
+
+
+console.log(firstName); // chiru
+console.log(lastName);  // gampala
+console.log(village);   // ponduru
