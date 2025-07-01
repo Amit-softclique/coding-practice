@@ -1,0 +1,27 @@
+const input = [
+ { name: 'Alice', city: 'New York' },
+ { name: 'Bob', city: 'London' },
+ { name: 'Charlie', city: 'New York' }
+]
+
+Output: {
+ 'New York': [
+     { name: 'Alice', city: 'New York' },
+     { name: 'Charlie', city: 'New York' }
+     ],
+ 'London': [{ name: 'Bob', city: 'London' }]
+}
+
+function groupArray(arr){
+    const result = arr.reduce((acc, hash)=> {
+        const {city} = hash;
+        if (!acc[city]) {
+            acc[city] = []
+        }
+        acc[city].push(hash);
+        return acc
+    }, {});
+    return result;
+}
+
+console.log(groupArray(input))
