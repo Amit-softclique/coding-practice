@@ -1,0 +1,29 @@
+const inputarr = [
+    {date: '07/06/2024', temp: 30, unit: 10},
+    {date: '07/06/2024', temp: 35, unit: 15},
+    {date: '08/06/2024', temp: 34, unit: 14},
+    {date: '07/06/2024', temp: 33, unit: 13},
+    {date: '08/06/2024', temp: 38, unit: 18},
+    {date: '08/06/2024', temp: 36, unit: 16},
+    ]
+    
+const output = [
+    {date: '07/06/2024', maxTemp: 35, minTemp: 30},
+    {date: '08/06/2024', maxTemp: 38, minTemp: 34}
+    ]
+    
+function findMinMax(arr){
+    const result = arr.reduce((acc, hash)=> {
+        const {temp, date} = hash
+        if (!acc[date]){
+            acc[date] = {date, maxTemp: temp, minTemp: temp}
+        } else{
+            acc[date].maxTemp = Math.max(acc[date].maxTemp, temp);
+            acc[date].minTemp = Math.min(acc[date].minTemp, temp)
+        }
+        return acc
+    }, []);
+    return Object.values(result);
+}
+
+console.log("Output=>", findMinMax(inputarr));
