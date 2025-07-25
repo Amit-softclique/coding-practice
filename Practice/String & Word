@@ -1,0 +1,32 @@
+// 1. Check if a string or word is a palindrome
+const input = 'madamem'
+function palindrome(string) {
+    let len = string.length;
+    
+    for (let i=0; i<len/2 ; i++){
+        console.log(string[i], string[len-1-i])
+        if (string[i] !== string[len-1-i]) {
+            console.log('Not palindrome');
+            return;
+        }
+    }
+    console.log('Its palindrome')
+}
+output: Not palindrome
+console.log('check', palindrome(input))
+***************************************************************
+// 2. Find the longest word from the sentence.
+const input = 'This is test beautiful fvhilhflhvlhfdfdbbd kdvfdvf.'
+function longestWord(sentence) {
+    const arr = sentence.toLowerCase().split(' ');
+    let longest = ''
+    for (let i=0; i<arr.length; i++){
+        if (arr[i].length > longest.length){
+            longest = arr[i];
+        }
+    }
+    return longest;
+    
+}
+console.log('check', longestWord(input))
+output : fvhilhflhvlhfdfdbbd
