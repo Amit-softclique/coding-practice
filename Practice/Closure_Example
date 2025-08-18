@@ -1,0 +1,10 @@
+function interviewer(question) {
+    console.log(`Interviewer: ${question}`);
+    
+    return function candidate() {
+        console.log(`Candidate: I still remember the question :: ${question}`);
+    };
+}
+
+const round1 = interviewer('Example of Closure==')
+round1();
