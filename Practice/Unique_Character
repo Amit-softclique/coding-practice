@@ -1,1 +1,20 @@
+// Find the unique character from the string
 
+input = "misssippie"
+output = "mispe"
+
+let str = "misssippie"
+function uniqueChar(str){
+    let result = ''
+    let unique = ''
+    if (str.length > 0) {
+        const text = str.toLowerCase().split('')
+         result = text.reduce((hash, word) => {
+            return hash.includes(word) ? hash : hash + word;
+        }, "")
+    }
+
+    return result;
+}
+
+console.log('out=>', uniqueChar("misssippie"))
