@@ -1,0 +1,35 @@
+
+const users = [
+  { name: "Alice", age: 25 },
+  { name: "Bob", age: 30 },
+  { name: "Charlie", age: 15 },
+  { name: "David", age: 35 }
+];
+
+function descendingSort(arr) {
+    if (arr.length > 0) {
+        // buble sort (assending order)
+        for(let i=0; i<arr.length; i++){
+            for(let j=0; j<arr.length -i -1; j++){
+                if (arr[j].age > arr[j+1].age) {
+                // if (arr[j].age < arr[j+1].age) { (descending order)
+                    let temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+        return arr;
+        
+    } else {
+        console.log('please add array data.')
+    }
+}
+
+console.log('sort', descendingSort(users));
+output=> sort [
+  { name: 'Charlie', age: 15 },
+  { name: 'Alice', age: 25 },
+  { name: 'Bob', age: 30 },
+  { name: 'David', age: 35 }
+]
