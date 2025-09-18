@@ -1,0 +1,28 @@
+// find the perfect square from the array of elements
+const input = [10,12,16, 19, 25, 28,30,36,40]
+// output1 = [16, 25, 36]
+// output2 = [{16: 4}, {25: 5}, {36: 6}]
+
+function perfectSquare(arr){
+    let result = []
+   for (let i=0; i<arr.length; i++){
+       const sqrt = Math.sqrt(arr[i]);
+       if (sqrt % 1 === 0) {
+           result.push({[arr[i]] : sqrt})
+       }
+   } 
+   return result
+}
+// output2 = [{16: 4}, {25: 5}, {36: 6}]
+
+function perfectSquare(arr){
+    let result = []
+   for (let i=0; i<arr.length; i++){
+       const sqrt = Math.sqrt(arr[i]);
+       if (sqrt % 1 === 0) {
+           result.push(arr[i])
+       }
+   } 
+   return result
+}
+// output1 = [16, 25, 36]
