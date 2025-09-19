@@ -1,0 +1,28 @@
+const input = [2,4,0,6,0,8,10,0,14]
+// output = [2,4,6,8,10,14,0,0,0]
+
+function moveZero(arr) {    
+    const res = arr.reduce((hash, word)=> {
+        word === 0 ? hash.zero.push(word) : hash.nonzero.push(word)
+        return hash
+    }, {zero:[], nonzero:[]})
+    const {zero, nonzero} = res;
+    return output = [...nonzero, ...zero]
+}
+//output = [2,4,6,8,10,14,0,0,0]
+
+
+function moveZero(arr) {
+     let nonZero = [];
+     let zero = []
+      nonZero = arr.filter((item, id) => item !== 0 );
+      zero = arr.filter((item, id) => item == 0);
+     console.log('res', nonZero, zero);
+     if (zero.length > 0){
+         for(let i=0; i<zero.length; i++) {
+             nonZero.push(zero[i])
+         }
+         return nonZero;
+     }
+}
+//output = [2,4,6,8,10,14,0,0,0]
