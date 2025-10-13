@@ -1,0 +1,29 @@
+// Find first repeating character (e.g., "success" → "c")
+
+const arrayy = 'success'
+function firstRepeat(str) {
+    let seen = [];
+    let first=null;
+    for (ch of str){
+        if(seen.includes(ch)){
+            first = ch;
+            break;
+        } else {
+            seen.push(ch)
+        }
+    }
+    return first
+}
+
+console.log('output=>', firstRepeat(arrayy))
+***********************************************************
+const str = "success";
+
+const firstRepeat = str.split('').reduce((acc, ch) => {
+  if (acc.found) return acc;
+  if (acc.seen.includes(ch)) acc.found = ch;
+  else acc.seen.push(ch);
+  return acc;
+}, { seen: [], found: null }).found;
+
+console.log(firstRepeat); // Output: "c"
