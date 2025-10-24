@@ -22,4 +22,25 @@ function mostFrequent() {
     return { element: maxFreqElement, count: maxFreqCount }
 }
 
+*****************************************************************************
+    Using Reduce method.
+
+    function mostFrequent(arr) {
+    const result = arr.reduce((hash, word)=> {
+       hash[word] = (hash[word] || 0) + 1;
+       return hash;
+    },{})
+    console.log('res=>', result, Object.keys(result))
+    
+    const element = Object.keys(result).reduce((a,b)=>
+    result[a] > result[b] ? a : b
+    );
+    console.log('element=>', element)
+    
+    const output = {element: Number(element), count: result[element]}
+    return output;
+}
+
+//output = { element: 4, count: 4 };
+
 console.log(mostFrequent())
