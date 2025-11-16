@@ -1,3 +1,16 @@
+********** Short code *********
+    function longestWord(str) {
+    let reverse = '';
+    for(let i=str.length -1; i>=0; i--){
+        reverse = reverse + str[i]
+    }
+    return reverse
+}
+
+console.log(revString())
+//output:: "liarknaS yoR timA"
+
+*************************************************
 var str='I love my country.';
 
 function reverseString(str1) {
@@ -32,14 +45,4 @@ function revString() {
     return result;
 }
 
-********** Short code *********
-    function longestWord(str) {
-    let reverse = '';
-    for(let i=str.length -1; i>=0; i--){
-        reverse = reverse + str[i]
-    }
-    return reverse
-}
 
-console.log(revString())
-//output:: "liarknaS yoR timA"
