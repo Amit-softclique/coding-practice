@@ -25,3 +25,16 @@ function groupArray(arr){
 }
 
 console.log(groupArray(input))
+******************************************************
+const userDetails = {
+  Prem: { age: 30, skills: ["JS", "SQL"] },
+  Preethi: { age: 28, skills: ["Java", "Python"] },
+  Rahul: { age: 32, skills: ["JS", "Python"] }
+};
+
+ const output = {
+   JS: ["Prem", "Rahul"],
+   SQL: ["Prem"],
+   Java: ["Preethi"],
+   Python: ["Preethi", "Rahul"]
+ }
